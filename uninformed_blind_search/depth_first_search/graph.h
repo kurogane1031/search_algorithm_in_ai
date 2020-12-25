@@ -1,18 +1,18 @@
 #ifndef GRAPH_H_
 #define GRAPH_H_
 #include "node.h"
-#include <list>
+#include <unordered_map>
 namespace depth_first_search
 {
+    using MAP = std::unordered_map<int, depth_first_search::Node>;
     class Graph
     {
-    public:
-        Graph() = default;
-
-        void setNodes(std::vector<depth_first_search::Node>& nodes);
-        std::vector<depth_first_search::Node> getNodes();
-    private:
-        std::vector<depth_first_search::Node> m_nodes;
+        public:
+            Graph() = default;
+            void setNodes(const MAP& nodes);
+            MAP getNodes();
+        public:
+            MAP m_nodes;
     };
 }
 

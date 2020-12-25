@@ -11,10 +11,10 @@ namespace depth_first_search
         public:
             DFS() = default;
             void dfs(depth_first_search::Graph& graph);
-            void dfsInStack(depth_first_search::Node& root);
+            void dfsInStack(int root_key);
         private:
-            std::stack<depth_first_search::Node> m_stacks;
-            std::vector<bool> visited;
+            std::stack<int> m_stacks;
+            depth_first_search::MAP m_nodes;
     };
 }
 

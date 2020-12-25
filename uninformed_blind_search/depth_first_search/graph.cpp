@@ -2,12 +2,12 @@
 
 namespace depth_first_search
 {
-    void Graph::setNodes(std::vector<depth_first_search::Node>& nodes)
+    void Graph::setNodes(const MAP& nodes)
     {
         m_nodes = nodes;
     }
 
-    std::vector<depth_first_search::Node> Graph::getNodes()
+    MAP Graph::getNodes()
     {
         return m_nodes;
     }

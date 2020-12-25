@@ -21,6 +21,10 @@ namespace depth_first_search
     {
         m_visited = is_visited;
     }
+    void Node::addNeighbourKey(int key)
+    {
+        m_neighbour_key_list.push_back(key);
+    }
 
     void Node::addNeighbour(Node& node)
     {
@@ -42,6 +46,10 @@ namespace depth_first_search
         return m_visited;
     }
 
+    std::vector<int> Node::getNeighbourKeyList()
+    {
+        return m_neighbour_key_list;
+    }
     std::vector<Node> Node::getNeighbour()
     {
         return m_neighbour;

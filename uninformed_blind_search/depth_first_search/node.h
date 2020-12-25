@@ -6,11 +6,12 @@
 #include <fmt/core.h>
 #include <fmt/format.h>
 #include <fmt/ostream.h>
+#include <list>
 namespace depth_first_search
 {
     struct Object
     {
-        int idx = 0;
+        char idx = 0;
     };
 
     std::ostream& operator<<(std::ostream& stream, const Object& others);
@@ -23,16 +24,18 @@ namespace depth_first_search
 
             void setElement(const Object& element);
             void setVisited(bool is_visited);
+            void addNeighbourKey(int key);
             void addNeighbour(Node& node);
             void setNeighbour(std::vector<Node>& neighbour);
 
             Object getElement();
             bool isVisited();
+            std::vector<int> getNeighbourKeyList();
             std::vector<Node> getNeighbour();
         private:
             Object m_element;
             bool m_visited = false;
-            std::vector<Node>* p_m_neighbour;
+            std::vector<int> m_neighbour_key_list;
             std::vector<Node> m_neighbour;
     };
 }
