@@ -1,2 +1,2 @@
-add_executable(run node.cpp graph.cpp heuristic.cpp main.cpp)
-target_link_libraries(run PUBLIC fmt::fmt Matplot++::matplot)
+add_subdirectory(heuristic_search)
+# add_subdirectory(astar_search)
