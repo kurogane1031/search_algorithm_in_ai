@@ -22,4 +22,4 @@ find_package(Matplot++)
 find_package(FMT)
 
 add_subdirectory(uninformed_blind_search)
-# add_subdirectory(informed_heuristic_search)
+add_subdirectory(informed_heuristic_search)
