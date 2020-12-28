@@ -7,11 +7,14 @@
 #include <fmt/format.h>
 #include <fmt/ostream.h>
 #include <list>
+#include <iomanip>
 namespace depth_first_search
 {
     struct Object
     {
-        char idx = 0;
+        int idx = 0;
+        int row = 0;
+        int col = 0;
     };
 
     std::ostream& operator<<(std::ostream& stream, const Object& others);

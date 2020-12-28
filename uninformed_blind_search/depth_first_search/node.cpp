@@ -4,7 +4,7 @@ namespace depth_first_search
 {
     std::ostream& operator<<(std::ostream& stream, const Object& others)
     {
-        stream << others.idx;
+        stream << others.row << std::setw(4) << others.col;
         return stream;
     }
 

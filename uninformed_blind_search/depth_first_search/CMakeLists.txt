@@ -6,6 +6,8 @@ add_library(
   graph.cpp
   dfs.h
   dfs.cpp
+  maze.h
+  maze.cpp
   )
 
 target_link_libraries(libdfs PUBLIC Matplot++::matplot fmt::fmt)
